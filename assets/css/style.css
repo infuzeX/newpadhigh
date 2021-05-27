@@ -119,21 +119,13 @@ html {
       width: 90%;
       width: 90vw;
     }
-    .container{
     
-      /* intialize the container as a flex box */
+    /* .section-quiqUnderstanding{
       width: 100%;
-      display: flex;
-      flex-direction: row;       
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-       
-    }
-    .section-quiqUnderstanding{
-      width: 300px;
       margin: 0 auto;
-    }
+    } */
+    
+
     
   }
   @media screen and (min-width: 576px) {
@@ -146,19 +138,8 @@ html {
       display: inline-block;
     }
     .section-quiqUnderstanding{
-      width: 300px;
-      margin: 0 auto;
-    }
-    .container{
-    
-      /* intialize the container as a flex box */
       width: 100%;
-      display: flex;
-      flex-direction: row;       
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-       
+      margin: 0 auto;
     }
     
   }  
@@ -189,7 +170,7 @@ html {
     height: 100px;
   }
   .slogn h2{
-    width: 416px;
+    width: 100%;
     height: 54px;
     margin-top: 58px;
     font-style: normal;
