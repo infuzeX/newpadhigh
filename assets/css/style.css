@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2? family=Poppins:wght@600&display=swap');
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: Poppins;
+  }
+  
+  nav {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .9;
+    height: 82px;
+    width: 100%;
+    z-index: 5;   
+  }
+  
+  nav a {
+    color: #FFB100;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+
+  }
+  /* nav a:hover, nav a:active {
+    background-color: #FFFFFF;
+    color: #eff6fe;
+    text-decoration: none;
+  }
+  nav a:focus {
+    color: #eff6fe;
+    text-decoration: none;
+  } */
+
+  .padhhighLogo{
+    width: 153px;
+    height: 63px;
+    margin-left: -15px;
+    margin-top: -12px;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  .block-one {
+    padding: 10px;
+    height: 58px;
+  }
+
+  .block-one a {
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  
+  @media screen and (max-width: 575px) {
+    nav {
+      display: block;
+      height: 58px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .toggle {
+      display: inline-block;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .block-one {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .block-two {
+      background-color: rgba(0,0,0,0.6);
+      display: none;   
+      position: relative;
+      opacity: 0.9;
+      top: -58px;
+      left: 0;
+      margin-top: 10px;
+    /*z-index: 1;*/ 
+      width: 100%;
+      width: 100vw;
+    }
+    .block-two a,img {
+      display: block;  
+    }
+    .block-two div {
+      background-color: orange;
+      font-size: 1.5rem;
+     
+      width: 90%;
+      width: 90vw;
+    }
+    .container{
+    
+      /* intialize the container as a flex box */
+      width: 100%;
+      display: flex;
+      flex-direction: row;       
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+       
+    }
+    .section-quiqUnderstanding{
+      width: 300px;
+      margin: 0 auto;
+    }
+    
+  }
+  @media screen and (min-width: 576px) {
+    .block-two {
+      padding: 10px;
+    
+    }
+    .block-two a,img {
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .section-quiqUnderstanding{
+      width: 300px;
+      margin: 0 auto;
+    }
+    .container{
+    
+      /* intialize the container as a flex box */
+      width: 100%;
+      display: flex;
+      flex-direction: row;       
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+       
+    }
+    
+  }  
+  .suplemento {height: 1500px;}
+
+  .section-quiqUnderstanding{
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+  }
+  .heading{
+    margin-top: 186px;
+    margin-bottom: 58px;
+  }
+  .container{
+    
+    /* intialize the container as a flex box */
+    width: 100%;
+    display: flex;
+    flex-direction: row;       
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+     
+  }
+  .item{
+    width: 250px;
+    height: 100px;
+  }
+  .slogn h2{
+    width: 416px;
+    height: 54px;
+    margin-top: 58px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    color: rgba(33, 31, 31, 0.82);
+  }
+
+  .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  
+  
+  /*# sourceMappingURL=style.css.map */
+  

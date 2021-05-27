@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Padhhigh</title>
+    
+</head>
+<body>
+    <nav>
+        <div class="block-one">
+          <div class="toggle">
+            <a href="#"><span class="fa fa-bars fa-lg"></span></a>
+          </div>
+          <div>
+            <a href="#" class="logo">
+                <img class="padhhighLogo" src="./assets/images/padhhighLogo.png">
+            </a>
+            <!-- <a href="#" class="brand">brand</a> -->
+          </div>
+        </div>    
+        <div class="block-two">
+          <div>
+            <a href="#">CLASS 6-CBSE</a>
+            <div class="dropdown">
+              <img class="dropbtn" src="./assets/images/Ellipse 1.png">
+              <div class="dropdown-content">
+                <a href="#">Edit Profile</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+                
+          </div>
+        </div>
+    </nav>
+
+    <section class="section-quiqUnderstanding">
+
+      <div class="heading">
+        <center>
+          <h1>Quiq Understanding</h1>
+        </center>
+      </div>
+
+      <div class="container">
+    
+          <img class="item" id="item-1" src="./assets/images/subjects/Rectangle 2.png">
+
+          <img class="item" id="item-2" src="./assets/images/subjects/Rectangle 2.png">
+
+          <img class="item" id="item-3" src="./assets/images/subjects/Rectangle 2.png">
+
+      </div>
+
+      <div class="slogn">
+        <center>
+          <h2>
+            Don't memorise , understand concepts Do Padhhigh , Aim High
+          </h2>
+        </center>  
+      </div>
+
+    </section>
+    
+    
+</body>
+<script>
+  $(document).ready(function() {
+    $('.toggle').on('click', function() {
+          // this toggle is from jQueryUI
+          $('.block-two').toggle('slide', 500);     
+    });
+  });
+  
+</script>
+</html>
