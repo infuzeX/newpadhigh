@@ -2,42 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMEZ | header</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <title>Padhhigh</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
-        <div class="block-one">
-          <div class="toggle">
-            <a href="#"><span class="fa fa-bars fa-lg"></span></a>
-          </div>
-          <div>
-            <a href="#" class="logo">
-                <img class="padhhighLogo" src="./assets/images/padhhighLogo.png">
-            </a>
-            <!-- <a href="#" class="brand">brand</a> -->
-          </div>
-        </div>    
-        <div class="block-two">
-          <div>
-            <a href="#">CLASS 6-CBSE</a>
-            <div class="dropdown">
-              <img class="dropbtn" src="./assets/images/Ellipse 1.png">
-              <div class="dropdown-content">
-                <a href="#">Edit Profile</a>
-                <a href="#">Logout</a>
-              </div>
-            </div>
-                
-          </div>
-        </div>
-    </nav>
 
-    <section class="section-quiqUnderstanding">
+<body>
+
+
+
+    <header>
+        <nav>
+          <div id="navbar">
+            <div id="logo" class="reverse">
+              <div class="mobile-btn" style="font-size:30px;cursor:pointer; font-weight:bold;" onclick="openNav()">&#9776;</div>
+              
+                <img class="logo" src="./assets/images/logo.png">  
+    
+            </div>
+            <div id="links">
+              <a href="#">CLASS 6 - CBSE</a>
+
+              <div class="dropdown">
+                <img class="dropbtn" src="./assets/images/user.png">
+                <div class="dropdown-content">
+                  <a href="#" style="font-weight: 300;"><i class="fa fa-edit"></i> EDIT PROFILE</a>
+
+                  <a href="#" style="font-weight: 300;"><i class="fa fa-sign-out"></i> Logout</a>
+                   
+                </div>
+              </div>
+  
+            </div>
+          </div>
+    
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mySidenav" class="sidenav">
+          <a style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#"><i class="fa fa-edit"></i> Edit Profile</a>
+          <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+          
+        </div>
+     </header>
+
+     <section class="gap"></section>
+
+     <section class="section-quiqUnderstanding">
 
       <div class="heading">
         <center>
@@ -47,11 +62,15 @@
 
       <div class="container">
     
-          <img class="item" id="item-1" src="./assets/images/subjects/Rectangle 2.png">
-
-          <img class="item" id="item-2" src="./assets/images/subjects/Rectangle 2.png">
-
-          <img class="item" id="item-3" src="./assets/images/subjects/Rectangle 2.png">
+          <div class="item" id="item-1">
+            <span>Maths</span>
+          </div>
+          <div class="item" id="item-2">
+            <span>Science</span>
+          </div>
+          <div class="item" id="item-3">
+            <span>Vedic Maths</span>
+          </div>
 
       </div>
 
@@ -64,16 +83,21 @@
       </div>
 
     </section>
-    
-    
-</body>
+
+
 <script>
-  $(document).ready(function() {
-    $('.toggle').on('click', function() {
-          // this toggle is from jQueryUI
-          $('.block-two').toggle('slide', 500);     
-    });
-  });
-  
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
 </script>
+
+
+
+
+</body>
 </html>
