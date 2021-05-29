@@ -107,7 +107,7 @@ body {
 }
 
 a {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Mobile to Tablet  */
@@ -119,7 +119,7 @@ a {
   #logo {
     display: inline-grid;
     grid-template-columns: auto auto;
-    grid-gap: 70px;
+    grid-gap: 15%;
   }
 }
 
@@ -127,6 +127,7 @@ a {
 @media (min-width: 768px) {
   .mobile-btn {
     display: none;
+    color: #FFB100;
   }
 }
 /****************************************home-sub-header****************************************************/
