@@ -364,12 +364,6 @@ padding: 30px;
   }
   }
 
-  @media only screen and (min-width: 1100px){
-    .item{
-      width: 350px;
-      height: 150px;
-    }
-
   @media only screen and (min-width: 1300px){
     .item{
       width: 400px;
