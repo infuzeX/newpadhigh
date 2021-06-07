@@ -266,7 +266,7 @@ padding: 30px;
 /***************************************section yellowbg********************************************* */
 .yellowbg{
   background: url("../images/subjects/whitebackground.svg") #FFB100;
-  height: 18vh;
+  height: 15vh;
   width: 100%;
   margin-bottom: -40px ;
 }
@@ -304,7 +304,7 @@ padding: 30px;
    
 }
 .item{
-  margin-top: 100px;
+  margin-top: 60px;
   height: 300px;
   margin-bottom: 15px;
 }
