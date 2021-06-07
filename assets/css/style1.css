@@ -299,7 +299,6 @@ padding: 30px;
   display: flex;
   flex-direction: row;       
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
    
 }
@@ -329,10 +328,17 @@ padding: 30px;
 #item-1{
   height: 50vh;
   width: 700px;
+  margin-left: 6%;
 }
 #item-2{
   margin-top: 0px;
+  margin-left: 15%;
+  margin-right: 5%;
   width: 500px;
+}
+
+#item-2 h4{
+  padding: 17px;
 }
 
 
@@ -394,7 +400,8 @@ padding: 30px;
 
 .container video{
   border: 10px solid #FFB100;
-  height: 314px;
+  width: 800px;
+  height: 350px;
   border-radius: 10px;
 }
 
