@@ -310,7 +310,7 @@ padding: 30px;
 .slogn{
   margin-left: 6%;
   margin-right: 6%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .slogn h2{
   height: 54px;
@@ -454,5 +454,12 @@ input[type='range']::-webkit-slider-thumb{
 @media only screen and (max-width: 600px) {
   .yellowbg{
     height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1600px) {
+  #item-2{
+    margin-top: 0px;
+    margin-left: 10%; 
   }
 }
