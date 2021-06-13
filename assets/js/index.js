@@ -1,12 +1,4 @@
-$(document).ready(function() {
-  
- 
-    $('.toggle').on('click', function() {
-          // this toggle is from jQueryUI
-          $('.block-two').toggle('slide', 500);
-      
-      
-    });
-  
-  
-  });
+function toggleMenu() {
+  const navlist = document.querySelector('.nav-list');
+  navlist.classList.toggle('nav-list-open');
+}

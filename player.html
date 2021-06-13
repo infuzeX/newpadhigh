@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/player.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <title>Padhhigh</title>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div onclick="toggleMenu()" class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="/assets/images/logo.png">
+        </div>
+        <div class="nav">
+            <h2>CLASS 6 - CBSE</h2>
+            <ul class="nav-list">
+                <li onclick="toggleMenu()" id="close">
+                    <i class="fa fa-times"></i>
+                </li>
+                <li id="profile"><img src="assets/images/user.png"></li>
+                <li><a><i class="fa fa-edit"></i>&nbsp;&nbsp;Edit Profile</a></li>
+                <li><a><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Science</h2>
+        <!--video player start-->
+        <div class="video-player">
+            <div class="video">
+                <video height="100%" controls>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+             
+            <div class="playlists">
+               <span><i class="fa fa-list"></i>&nbsp;&nbsp;Lectures</span>
+               <ul class="videos">
+
+               </ul>
+            </div>
+        </div>
+        <ul class="watchTime"></ul>
+        <!--video player end-->
+    </div>
+
+</body>
+<script defer src="/assets/js/index.js"></script>
+<script defer src="/assets/js/screentime.js"></script>
+<script defer>
+    const videolists = document.querySelector('.videos');
+    const videoPlayer = document.querySelector('video');
+    const watchTimeLists = document.querySelector('.watchTime');
+    const state = {
+        videoTracker: null,
+        currentLecture: null,
+        videos: [{ videoId: 1, subject: "evs", chapter: "About Myself", unit: "unit 1", link: "https://vimeo.com/548929443/32be5c638a" },
+        { videoId: 2, subject: "evs", chapter: "Air and water", unit: "unit 2", link: "https://vimeo.com/548929574/fdfa99f438" },
+        { videoId: 3, subject: "evs", chapter: "Animal life", unit: "unit 3", link: "https://vimeo.com/548929704/6f06079156" },
+        { videoId: 4, subject: "evs", chapter: "Clothes", unit: "unit 4", link: "https://vimeo.com/548929847/a8ea64a0e6" },
+        { videoId: 5, subject: "evs", chapter: "Food", unit: "unit 5", link: "https://vimeo.com/548929970/6631a9dc18" },
+        { videoId: 5, subject: "evs", chapter: "Housing", unit: "unit 6", link: "https://vimeo.com/548930075/8dbd77ad2b" },
+        { videoId: 7, subject: "evs", chapter: "Major Directions", unit: "unit 8", link: "https://vimeo.com/548930212/3319f77f67" },
+        { videoId: 8, subject: "evs", chapter: "Our Family", unit: "unit 9", link: "https://vimeo.com/548930314/2b997127e1" },
+        { videoId: 9, subject: "evs", chapter: "Our Festivals", unit: "unit 10", link: "https://vimeo.com/548930435/678961fbe5" },
+        { videoId: 10, subject: "evs", chapter: "Our Neighborhood", unit: "unit 11", link: "https://vimeo.com/548930602/ca6006fbe5" },
+        { videoId: 11, subject: "evs", chapter: "Our Universe", unit: "unit 12", link: "https://vimeo.com/548930797/6b36e2306d" },
+        { videoId: 12, subject: "evs", chapter: "Our School", unit: "unit 13", link: "https://vimeo.com/548930690/73d97fb58a" },
+        { videoId: 13, subject: "evs", chapter: "Plant Life", unit: "unit 14", link: "https://vimeo.com/548930902/4c749911c2" },
+        { videoId: 14, subject: "evs", chapter: "Safety and First Aid", unit: "unit 15", link: "https://vimeo.com/548931018/61e014ddf0" },
+        { videoId: 15, subject: "evs", chapter: "The Human Body", unit: "unit 16", link: "https://vimeo.com/548931173/bc11f9db63" }]
+    }
+
+    state.videos.map(video => video.link = video.link.replace('vimeo.com', 'player.vimeo.com/video'));
+
+    console.log(state.videos)
+
+    function initializeVideoList(videos) {
+        videos.forEach(video => {
+            const li = document.createElement('li');
+            li.id = video.unit;
+            li.textContent = video.chapter;
+            videolists.appendChild(li)
+        })
+    }
+
+    function initializeVideo(videoId) {
+        const video = state.videos.find(video => video.videoId == videoId);
+        if (!video)
+            state["videoTracker"] = null;
+        state["currentLecture"] = video ? video : null;
+        videoPlayer.children[0].src = video ? video.link : "";
+        videoPlayer.load();
+    }
+
+    function displayWatchTime(data) {
+        const li = document.createElement('li');
+        const h3 = document.createElement('h3');
+        const duration = document.createElement('p');
+        const watchTime = document.createElement('p');
+
+        h3.textContent = data.chapter;
+        duration.innerHTML = `<span>Duration:</span> ${data.duration}s`;
+        watchTime.innerHTML = `<span>Watch Time:</span> ${data.watchTime}s`;
+
+        li.appendChild(h3);
+        li.appendChild(duration);
+        li.appendChild(watchTime);
+
+        watchTimeLists.appendChild(li);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        initializeVideoList(state.videos);
+        initializeVideo(1);
+    })
+
+    //video player
+    videolists.addEventListener('click', (e) => {
+        const videoId = Number.parseInt(e.target.id);
+        if (!videoId) return;
+        if (!state.currentLecture.videoId) {
+            initializeVideo(videoId);
+            return;
+        }
+        if (videoId === state.currentLecture.videoId) return;  
+        //if video is playing paused then initialize next video
+        if (!videoPlayer.paused)
+            videoPlayer.pause();
+        //get recorded data of previos video
+        const data = state["videoTracker"].getRecordedData();
+        displayWatchTime(data);
+        //initialize requested video
+        initializeVideo(videoId);
+    })
+
+    //video tracker
+    videoPlayer.addEventListener('loadedmetadata', (e) => {
+        const duration = Number.parseFloat(videoPlayer.duration.toFixed(2));
+        const chapter = state.currentLecture.chapter;
+        state["videoTracker"] = new VideoScreenTimeRecorder(chapter, duration);
+    });
+    videoPlayer.addEventListener('play', (e) => {
+        state["videoTracker"].recordStartTime();
+    });
+    videoPlayer.addEventListener('pause', (e) => {
+        state["videoTracker"].recordWatchTime();
+    });
+    videoPlayer.addEventListener('ended', (e) => {
+        state["videoTracker"].recordWatchTime();
+        const data = state["videoTracker"].getRecordedData();
+        if (state.videoTracker) {
+            state["videoTracker"].recordWatchTime();
+            const data = state["videoTracker"].getRecordedData();
+            displayWatchTime(data);
+        }
+        initializeVideo(state.currentLecture.videoId + 1);
+    });
+
+</script>
+</html>
