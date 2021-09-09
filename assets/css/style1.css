@@ -1,0 +1,465 @@
+:root {
+  --font-family: 'Rubik', sans-serif;
+  --main-color: #ffb607;
+  --body-color: #616161;
+  --heading-color: #111111;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --font-size: 16px;
+  --transition: all ease .5s;
+  --border-radius: 4px;
+  --box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+#navbar {
+  display: grid;
+  min-height: 60px;
+  grid-auto-flow: column;
+  background-color: #ffffff;
+  grid-gap: 1.5em;
+  padding: 10px 40px;
+  /* -webkit-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+  box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1); */
+}
+
+#logo {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFB100;
+  margin-top: 10px;
+  text-transform: uppercase;
+  
+}
+
+.logo {
+  margin-top: -5px;
+  width: 153px;
+  height: 63px;
+}
+
+#links {
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  grid-auto-flow: column;
+  grid-gap: 1.5em;
+  font-family: "Poppins", sans-serif;
+}
+
+#links a {
+  margin-top: 20px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: #FFB100;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#links a:hover {
+  color: #FFB100;
+}
+
+#links img{
+  margin-top: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+#links .dropdown a {
+  color: #000;
+}
+
+
+/* =======================
+******* Mobile Menu ******
+========================*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  text-transform: none;
+}
+
+.sidenav a:hover {
+  color: #FFB100;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile to Tablet  */
+@media (min-width: 320px) and (max-width: 767px) {
+  #links,
+  .mobile-menu {
+    display: none;
+  }
+  #logo {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15%;
+  }
+  /* .heading{
+    margin-top: 2vh;
+  } */
+
+}
+
+/* Tablet to Desktop */
+@media (min-width: 768px) {
+  .mobile-btn {
+    display: none;
+    color: #FFB100;
+  }
+  /* .heading{
+    margin-top: 2vh;
+  } */
+}
+/****************************************home-sub-header****************************************************/
+
+.top-bars{
+  width: 100%;
+  background: #E5E5E5;
+
+ 
+}
+.links{
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+.links a{
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.links a:hover{
+ color: #FFB100;
+ 
+}
+
+
+
+
+/***************************************CATEGORIES****************************************************/
+.categories{
+background-color:#CFD7C0 ;
+height: 720px;
+}
+.categories .head{
+  padding: 70px;
+}
+.categories .head p{
+ font-size: 24px;
+ font-weight: 700;
+ 
+ color: #000;
+}
+
+.items
+{
+  background-color: #fff;
+justify-content: space-around;
+  
+  display: flex;
+padding: 30px;
+}
+.items p{
+  text-align: center;
+  padding: 20px;
+}
+
+/****************************************avatar dropdown css**************************************************/
+.dropbtn {
+  color: white;
+  padding: 0px;
+  font-size: 10px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 13px;
+  margin-right: -30px;
+  background-color: #f1f1f1;
+  right: 0;
+  min-width: 250px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  margin-left: 10px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* text-transform:lowercase; */
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+.dropdown-content hr{
+  width: 194px;
+  height: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/***************************************section yellowbg********************************************* */
+.yellowbg{
+  background: url("../images/subjects/whitebackground.svg") #FFB100;
+  height: 15vh;
+  width: 100%;
+  margin-bottom: -40px ;
+}
+
+/* *****************************************section quiq understanding**************************************** */
+
+.section-quiqUnderstanding{
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  border-radius: 40px;
+}
+.heading{
+  margin-top: 22vh;
+  margin-bottom: 58px;
+}
+.heading h1{
+  color: #211F1F;
+  letter-spacing: 0.08em;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 510;
+  font-size: 24px;
+  line-height: 36px;
+}
+.container{
+  
+  /* intialize the container as a flex box */
+  width: 100%;
+  display: flex;
+  flex-direction: row;       
+  flex-wrap: wrap;
+  align-items: center;
+   
+}
+.item{
+  margin-top: 60px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+.slogn{
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 2%;
+}
+.slogn h2{
+  height: 54px;
+  margin-bottom: -12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  font-family: 'Poppins';
+  color: rgba(33, 31, 31, 0.82);
+}
+
+#item-1{
+  height: 50vh;
+  width: 700px;
+  margin-left: 6%;
+}
+#item-2{
+  margin-top: 0px;
+  margin-left: 15%;
+  margin-right: 5%;
+  width: 500px;
+}
+
+#item-2 h4{
+  padding: 17px;
+}
+
+
+/*****************************chapter's css**************************** */
+#item-2 .chapter-name{
+  height: 50px;
+  background-color: #E9E9E9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#item-2 h4{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+}
+#item-2 span{
+  margin-left: 25px;
+  font-size: 10px;
+}
+
+#item-2 a{
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  /* identical to box height */
+
+  letter-spacing: 0.02em;
+
+  color: #FFFFFF;
+}
+
+#item-2 li{
+  list-style-type: none;
+  margin-top: 15px;
+  letter-spacing: 0.02em;
+
+}
+
+#item-2 .time{
+  margin-left: 128px;
+  font-size: 10px;
+}
+
+#item-2 hr{
+  width: 90%;
+  margin-left: 0px;
+  height: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+.container video{
+  border: 10px solid #FFB100;
+  width: 800px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.slogn hr{
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 0;
+  width: 50%;
+  border: 0.53px solid #211F1F;
+}
+.slogn p{
+  margin-left: 18px;
+  font-family: 'Poppins';
+}
+
+/* ************************Video********************** */
+
+div#video_control_bar {
+  background: #333;
+  padding: 10px;
+  color: grey;
+}
+div#video_player_box{
+  width: 550px;
+  background: #000;
+  margin: 0px auto;
+}
+input#seekslider{
+  width: 180px;
+}
+input#soundslider{
+  width: 80px;
+}
+input[type='range'] {
+  -webkit-appearance: none !important;
+  background: #000;
+  border: #666 1px solid;
+  height: 4px;
+}
+input[type='range']::-webkit-slider-thumb{
+  -webkit-appearance: none !important;
+  background: #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+/* *************************************media query************************************************ */
+@media only screen and (max-width: 600px) {
+  .yellowbg{
+    height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1600px) {
+  #item-2{
+    margin-top: 0px;
+    margin-left: 10%; 
+  }
+}
