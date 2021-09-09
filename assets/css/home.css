@@ -190,7 +190,10 @@ a {
   text-align: center;
   padding: 20px;
 }
+#item-1:hover{
+ width: 100%;
 
+}
 /****************************************avatar dropdown css**************************************************/
 
 .dropbtn {
