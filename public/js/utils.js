@@ -23,6 +23,14 @@ function updateLinks(link) {
     return link.split('/').splice(0, 5).join('/');
 }
 
+function updateLinksV2(link) {
+    if (!link) return;
+    link = link.replace("vimeo.com", "player.vimeo.com/video");
+    const splittedLink = link.split('/');
+    const query = splittedLink[5];
+    return `${splittedLink.splice(0, 5).join('/')}?h=${query}`;
+}
+
 class SortVideoLecture {
     subjects;
     constructor() {

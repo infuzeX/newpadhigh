@@ -1,6 +1,6 @@
 function addExcercises(excercises) {
     let excs = "";
-    excercises.forEach((video, index) => {
+    excercises.forEach((video) => {
         excs += `<li onclick="playVideo(event)" id="${video.link}">${video.name}</li>`
     })
     return excs;
@@ -61,9 +61,8 @@ function playerTemplate(data, standard) {
           <!--video player start-->
           <div class="video-player">
               <div class="video">
-                  <video height="100%" controls>
-                      <source src="" type="video/mp4">
-                  </video>
+              <iframe src="" width="100%" height="100%" frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
               </div>
   
               <div class="playlists">

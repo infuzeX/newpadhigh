@@ -38,7 +38,7 @@ function homeTemplate(data) {
             <div id="links">
               <div class="dropdown">
                 <div class="profile">
-                  <h4><span class="student-name"></span></h4>
+                  <h4><span class="user-name"></span></h4>
                   <i class="fa fa-angle-down" style="font-size:30px; margin-left: 10px;padding: ;"></i>
                 </div>
                 <div class="dropdown-content">
@@ -93,7 +93,7 @@ function homeTemplate(data) {
           document.getElementById("mySidenav").style.width = "0";
         }
       </script>
-
+      <script src="/public/js/home.js"></script>
     </body>
     
     </html>`

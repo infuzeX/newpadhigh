@@ -55,16 +55,16 @@ app.post('/genhtml', async (req, res) => {
 app.post('/genhtml-v2', async (req, res) => {
     try {
         console.log(`${__dirname}/public/${req.body.medium}/${req.body.standard}`)
-        const isDirExist = await exists(`${__dirname}/public/${req.body.medium.toLowerCase()}/${req.body.standard}`);
+        const isDirExist = await exists(`${__dirname}/public/${req.body.medium}/${req.body.standard}`);
         console.log(isDirExist)
         if (!isDirExist) {
             console.log("Creating Directory!");
-            await mkdir(`${__dirname}/public/${req.body.medium.toLowerCase()}/${req.body.standard}`);
+            await mkdir(`${__dirname}/public/${req.body.medium}/${req.body.standard}/`);
         }
         await writeFile(`${__dirname}/public/${req.body.medium}/${req.body.standard}/${req.body.subject}.html`, req.body.htmlString);
-        return res.json({ status: "success", message: "created successfully" })
+        return res.status(200).json({ status: "success", message: `${req.body.subject} Subject From Class ${req.body.standard.split('-').join(' ')} Created Successfully in ${req.body.medium} Medium` })
     } catch (err) {
-        return res.json({ status: "error", message: err })
+        return res.status(400).json({ status: "error", message: `Error  while creating home page: ${err.message}` })
     }
 });
 
@@ -72,9 +72,9 @@ app.post('/genhtml-v2', async (req, res) => {
 app.post('/genhome', async (req, res) => {
     try {
         await writeFile(`${__dirname}/public/${req.body.medium}/${req.body.standard}/home.html`, req.body.htmlString);
-        return res.json({ status: "success", message: "created successfully" })
+        return res.status(200).json({ status: "success", message: "home page created successfully" })
     } catch (err) {
-        return res.json({ status: "error", message: err.message })
+        return res.status(400).json({ status: "error", message: `Error  while creating home page: ${err.message}` })
     }
 })
 
